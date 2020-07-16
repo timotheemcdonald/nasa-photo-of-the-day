@@ -4,6 +4,23 @@ import axios from 'axios'
 import "./App.css";
 import Asteroids from './Asteroids'
 import Photo from './Photo'
+import styled from 'styled-components'
+
+const StyledMain = styled.div`
+
+background-color: teal;
+color:gold;
+max-width:80%;
+width:800px;
+padding:10px;
+border-radius:5px;
+box-shadow:0 0 10px 2px;
+margin:5% auto;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+`
 
 function App() {
 
@@ -32,16 +49,13 @@ function App() {
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-    
+    <StyledMain>
       <div className="Photo">
         <h2>Here is NASA's Photo of the Day:</h2>
         <Photo img src={apod}/>
         </div>
         <Asteroids />
+        </StyledMain>
     </div>
 
   );

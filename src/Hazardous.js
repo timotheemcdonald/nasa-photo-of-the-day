@@ -1,8 +1,18 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const HazardStyle = styled.div`
+
+background-color:darkslategrey;
+max-width:80%;
+width:600px;
+padding:2px;
+
+`
 
 const Hazardous = props => {
     return (
-        <div>{props.name}</div>
+        <HazardStyle>>{props.name}</HazardStyle>
     )
 }
 
